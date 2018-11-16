@@ -26,16 +26,49 @@
                 <nuxt-link to='/site'>网站导航</nuxt-link>
                 <div class="subContainer">
                     <dl class="hotel">
-                        <dd>1</dd>
+                        <dt>酒店旅游</dt>
+                        <dd>国际机票</dd>
+                        <dd>国际机票</dd>
+                        <dd>国际机票</dd>
+                        <dd>国际机票</dd>
+                        <dd>国际机票</dd>
+                        <dd>国际机票</dd>
+                        <dd>国际机票</dd>
+                        <dd>国际机票</dd>
+                        <dd>国际机票</dd>
+                        <dd>国际机票</dd>
+                        <dd>国际机票</dd>
                     </dl>
                     <dl class="food">
-                        <dd>2</dd>
+                        <dt>吃美食</dt>
+                        <dd>烤鱼</dd>
+                        <dd>特色小吃</dd>
+                        <dd>烧烤</dd>
+                        <dd>烧烤</dd>
+                        <dd>烧烤</dd>
+                        <dd>烧烤</dd>
+                        <dd>烧烤</dd>
+                        <dd>烧烤</dd>
                     </dl>
                     <dl class="movie">
-                        <dd>3</dd>
+                        <dt>看电影</dt>
+                        <dd>热映电影</dd>
+                        <dd>热映电影</dd>
+                        <dd>热映电影</dd>
+                        <dd>热映电影</dd>
                     </dl>
                     <dl class="app">
-                        <dd>4</dd>
+                        <dt>手机应用</dt>
+                        <dd>
+                            <a href="#">
+                                <img class="appicon" src="//s0.meituan.net/bs/fe-web-meituan/e5eeaef/img/appicons/meituan.png" title="美团app" alt="美团app">
+                            </a>
+                        </dd>
+                        <dd>
+                            <a href="">
+                                <img class="appicon" src="//s1.meituan.net/bs/fe-web-meituan/404d350/img/appicons/waimai.png" title="外卖app" alt="外卖app">
+                            </a>
+                        </dd>
                     </dl>
                 </div>
             </li>
