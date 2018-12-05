@@ -6,16 +6,16 @@
             </el-col>
             <el-col :span="15" class="center">
                 <div class="wrapper">
-                    <el-input placeholder="搜索商家或地点"/>
-                    <button class="el-button el-button-primary"><i class="el-icon-search"/></button>
-                    <dl class="hotPlace" style="display:none;">
+                    <el-input v-model="search" placeholder="搜索商家或地点" @focus="focus" @blur="blur" @input="input"/>
+                    <button class="el-button el-button--primary"><i class="el-icon-search"/></button>
+                    <dl class="hotPlace" v-if="isHotPlace">                        
                         <dt>热门搜索</dt>
-                        <dd>麻辣香锅</dd>
-                        <dd>KTV</dd>
-                        <dd>旅游</dd>
+                        <dd v-for="(item, idx) in hotPlace"
+                        :key="idx">{{item}}</dd>
                     </dl>
-                    <dl class="searchList" style="display:none;">
-                        <dd>火锅</dd>
+                    <dl class="searchList" v-if="isSearchList">
+                        <dd v-for="(item, idx) in searchList"
+                        :key="idx">{{item}}</dd>
                     </dl>
                 </div>
                 <p class="suggset" >
@@ -53,3 +53,38 @@
         </el-row>
     </div>
 </template>
+<script>
+    export default {
+        data() {
+            return {
+                search:'',
+                isFocus: false,
+                searchList:['故宫','天安门'],
+                hotPlace:['火锅','KTV']
+            }
+            
+        },
+        computed:{
+            isHotPlace: function() {
+                return !this.search&&this.isFocus
+            },
+            isSearchList:function() {
+                return this.search&&this.isFocus
+            }
+        },
+        methods: {
+            focus: function() {
+                this.isFocus = true
+            },
+            blur: function() {
+                let self = this;
+                setTimeout(()=>{
+                    self.isFocus = false;
+                },200)
+            },
+            input:function() {
+                console.log('input');
+            }
+        }
+    }
+</script>
