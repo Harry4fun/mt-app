@@ -1,49 +1,23 @@
 <template>
-  <section class="container">
-    <div>
-
-    </div>
-  </section>
+  <div class="page-index">
+    <el-row>
+      <el-col :span="5">
+        <emenu />
+      </el-col>
+      <el-col :span="19">2</el-col>
+    </el-row>
+    <el-row>3</el-row>
+  </div>
 </template>
 
 <script>
-import Logo from '~/components/Logo.vue'
-
-export default {
-  components: {
-    Logo
+  import Emenu from '@/components/public/index/menu.vue'
+  export default {
+    components: {
+      Emenu
+    }
   }
-}
 </script>
-
-<style>
-.container {
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-
-.title {
-  font-family: 'Quicksand', 'Source Sans Pro', -apple-system, BlinkMacSystemFont,
-    'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-  display: block;
-  font-weight: 300;
-  font-size: 100px;
-  color: #35495e;
-  letter-spacing: 1px;
-}
-
-.subtitle {
-  font-weight: 300;
-  font-size: 42px;
-  color: #526488;
-  word-spacing: 5px;
-  padding-bottom: 15px;
-}
-
-.links {
-  padding-top: 15px;
-}
+<style lang="scss">
+  @import '@/assets/css/index/index.scss';
 </style>
