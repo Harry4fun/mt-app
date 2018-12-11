@@ -7,8 +7,8 @@
                 <i :class="item.type"/>{{item.name}}<span class="arrow"/>
             </dd>
         </dl>
-        <div class="detail">
-            <template v-for="(item,idx) in curdetail">
+        <div class="detail" v-if="kind" @mouseenter="sover" @mouseleave="sout">
+            <template v-for="(item,idx) in curdetail.child">
                 <h4 :key="idx">{{item.title}}</h4>
                 <span v-for="v in item.child"
                 :key="v">{{v}}</span>
@@ -49,14 +49,20 @@
         methods:{
             mouseleave:function(){
                 let self = this;
-                self._time = setTimeout(() => {
+                self._timer = setTimeout(() => {
                     self.kind = ''
                 }, 150);
             },
             enter:function(e){
                 this.kind = e.target.querySelector('i').className;
                 console.log('kind',this.kind);
-            }
+            },
+            sover:function(e){
+                clearTimeout(this._timer)
+            },
+            sout:function(e){
+                this.kind = ''
+            },
         }
     }
 </script>
