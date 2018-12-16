@@ -4,17 +4,23 @@
       <el-col :span="5">
         <emenu />
       </el-col>
-      <el-col :span="19">2</el-col>
+      <el-col :span="19">
+        <life />
+      </el-col>
     </el-row>
-    <el-row>3</el-row>
+    <el-row>
+      <artistic />
+    </el-row>
   </div>
 </template>
 
 <script>
   import Emenu from '@/components/public/index/menu.vue'
+  import Life from '@/components/public/index/life.vue'
+  import Artistic from '@/components/public/index/artistic.vue'
   export default {
     components: {
-      Emenu
+      Emenu,Life,Artistic
     }
   }
 </script>
